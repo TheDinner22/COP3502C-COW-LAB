@@ -2,8 +2,6 @@
 # 03/07/23
 # cow, a data class
 
-# from heifer_generator import HeiferGenerator
-
 class Cow:
     def __init__(self, name):
         self.name = name
