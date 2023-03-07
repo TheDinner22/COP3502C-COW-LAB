@@ -19,3 +19,11 @@ class Cow:
     def set_image(self, image):
         self.image = image
 
+    # given a string, msg, print the 
+    # funny cow saying the msg
+    def print(self, msg):
+        assert self.image != None, "this cow was not initilized properly"
+
+        print(msg)
+        print(self.image)
+
