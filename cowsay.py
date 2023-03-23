@@ -41,6 +41,8 @@ def main():
                 cow.print(msg)
                 break
         else: # I love this feature so much
+              # if the loop does not break, this else block
+              # runs
             print(f"Could not find {maybe_a_cow_name} cow!")
 
     # print sys.argv[0] as the msg
