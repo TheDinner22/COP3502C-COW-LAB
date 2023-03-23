@@ -6,6 +6,6 @@ class IceDragon(Dragon):
 
     # does this need to take in self?
     # could be static??
-    def can_breathefire(self):
+    def can_breathe_fire(self):
         return False
 
