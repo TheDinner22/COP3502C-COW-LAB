@@ -27,6 +27,7 @@ class Cow:
         print(msg)
         print(self.image)
 
+"""
 class Dragon(Cow):
     def __init__(self, name, image):
         super().__init__(name)
@@ -45,4 +46,5 @@ class IceDragon(Dragon):
     # could be static??
     def can_breathe_fire(self):
         return False
+"""
 
