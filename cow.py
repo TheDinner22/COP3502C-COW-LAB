@@ -46,7 +46,7 @@ class Dragon(Cow):
 
         print(msg)
         print(self.image)
-        print(f"This dragon {can_or_cannot} breath fire.")
+        print(f"This dragon {can_or_cannot} breathe fire.")
 
 class IceDragon(Dragon):
     def __init__(self, name, image):
