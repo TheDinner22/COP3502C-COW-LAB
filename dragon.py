@@ -10,3 +10,13 @@ class Dragon(Cow):
     def can_breathe_fire(self):
         return True
 
+    def print(self, msg):
+        assert self.image != None, "this cow was not initilized properly"
+
+        # can the dragon breath fire or not?
+        can_or_cannot = "can" if self.can_breathe_fire() else "cannot"
+
+        print(msg)
+        print(self.image)
+        print(f"This dragon {can_or_cannot} breath fire.")
+
