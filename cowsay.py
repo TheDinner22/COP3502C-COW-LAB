@@ -45,6 +45,10 @@ def main():
               # runs
             print(f"Could not find {maybe_a_cow_name} cow!")
 
+    # check for -f
+    elif first_argv == "-f":
+        print('todo!')
+
     # print sys.argv[0] as the msg
     else:
         # this just takes argv, ignores the filename, and combines the rest
