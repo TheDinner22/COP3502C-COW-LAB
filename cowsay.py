@@ -23,7 +23,9 @@ def main():
     if first_argv == "-l":
         # this is fancy
         cow_names = " ".join(map(lambda cow: cow.name, cows))
+        file_cow_names = " ".join(map(lambda cow: cow.name, file_cows))
         print(f"Cows available: {cow_names}")
+        print(f"File cows available: {file_cow_names}")
 
     # check for -n or -f
     elif first_argv == "-n" or first_argv == "-f":
