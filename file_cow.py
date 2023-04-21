@@ -1,12 +1,9 @@
-import os
 from cow import Cow
 
 # assumes the filename is valid
 def read_file_to_string_or_error(filename):
-    path = os.path.join("cows", filename)
-
     try:
-        with open(path) as file_object:
+        with open(filename) as file_object:
             return file_object.read()
     except Exception:
         raise RuntimeError("MOOOOO!!!!!!")

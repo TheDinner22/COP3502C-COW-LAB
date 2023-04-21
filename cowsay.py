@@ -11,6 +11,7 @@ def error(msg):
 def main():
     # create the cow objects
     cows = HeiferGenerator.get_cows()
+    file_cows = HeiferGenerator.get_file_cows()
 
     # make sure argc > 1
     if not len(sys.argv) > 1:
@@ -24,8 +25,8 @@ def main():
         cow_names = " ".join(map(lambda cow: cow.name, cows))
         print(f"Cows available: {cow_names}")
 
-    # check for -n
-    elif first_argv == "-n":
+    # check for -n or -f
+    elif first_argv == "-n" or first_argv == "-f":
         # make sure argc > 3
         # (otherwise the next three lines would index error)
         if not len(sys.argv) > 3:
@@ -34,8 +35,11 @@ def main():
         maybe_a_cow_name = sys.argv[2]
         msg = " ".join(sys.argv[3:])
 
+        # determine if it is cows or file cows that we are working with
+        list_of_cows_or_file_cows = cows if first_argv == "-n" else file_cows
+
         # loop through every cow
-        for cow in cows:
+        for cow in list_of_cows_or_file_cows:
             # if the names match, print the message and break
             if cow.name == maybe_a_cow_name:
                 cow.print(msg)
@@ -44,10 +48,6 @@ def main():
               # if the loop does not break, this else block
               # runs
             print(f"Could not find {maybe_a_cow_name} cow!")
-
-    # check for -f
-    elif first_argv == "-f":
-        print('todo!')
 
     # print sys.argv[0] as the msg
     else:
